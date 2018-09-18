@@ -15,9 +15,18 @@ public class DoMath {
 			System.out.println(Calculate.toImproperFrac(3, 1, 2));
 			System.out.println(Calculate.toMixedNum(7, 2));
 			System.out.println(Calculate.foil(2, 3, 6, -7, "n"));
-			System.out.println(Calculate.absVaulue(3));
+			System.out.println(Calculate.absVaulue(-3));
+			System.out.println(Calculate.max(5.0, 9.2));
+			System.out.println(Calculate.max(3,4));
+			System.out.println(Calculate.min(9, 7));
+			
+			
 		// TODO Auto-generated method stub
 
 	}
 
 }
+
+
+	
+	

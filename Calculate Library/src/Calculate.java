@@ -54,14 +54,42 @@ public class Calculate {
 	//}
 	//absolute value of the number passed
 	public static double absVaulue(double num){
-		if (num < 0);{
-		num =-num;
-		}  
-		if (num >= 0);{
-		num= +num;
+		if (num < 0){
+			num = -num;
+		} else {
 		}
 		return num;
-	
-		
 	}
-}
+	//returns larger value
+	public static double max(double num1, double num2) {
+		if (num1>num2) {
+			System.out.println(num1);
+		} else if (num1 <num2){ 
+			System.out.println(num2);
+		} return num2;
+	}
+	public static double max(double num1, double num2, double num3) {
+		if (num1>num2) {
+			System.out.println(num1);
+		}else if (num2>num1) {
+			System.out.println(num2);
+		}else if (num2>num3)	{
+			System.out.println(num2);
+		}else if (num3>num2) {
+			System.out.println(num3);
+		}else if (num1>num3) {
+			System.out.println(num1);
+		}else if (num3>num1) {
+			System.out.println(num3);
+		} return max();
+	}
+	public static int min(int num1, int num2) {
+		if (num1>num2) {
+			System.out.println(num1);
+		}else if (num2>num1) {
+			System.out.println(num2);
+		} return min;
+		}
+	}
+}	
+		
