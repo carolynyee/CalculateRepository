@@ -47,21 +47,54 @@ public class Calculate {
 		return (ax*cx+n + "^2" + " + " + (ax*d + b*cx)+ "n " + " + " + b*d);
 	}
 	//determines if integer is evenly divisible
-	//doesn't wooooooooooooooooooooooooorkkkkkkkkkkkkkk
-	//public static boolean isDivisibleBy (int num1, int num2) {
-		//boolean+= divisible(num1%num2);
-		//return boolean
-	//}
+	public static boolean isDivisibleBy (int num1, int num2) {
+		if(num1%num2==0) {
+		return true;
+	}else {
+		return false;
+		}
+	}
 	//absolute value of the number passed
 	public static double absVaulue(double num){
-		if (num < 0);{
-		num =-num;
-		}  
-		if (num >= 0);{
+		if (num < 0) {
+		num *=-1;
+		}  else if (num >= 0){
 		num= +num;
 		}
-		return num;
-	
-		
+		return num;	
 	}
-}
+	//returns larger of two values
+	public static double max(double num1, double num2) {
+		if (num1>num2) {
+			return num1;
+		} else {
+			return num2;	
+			}
+		}
+	//returns largest of three values
+	public static double max(double num1, double num2, double num3) {
+		if (num1>num2 && num2>num3) { 
+			return num1;
+		}else if (num2>num1 && num1>num3) {
+			return num2;
+		}else if (num3>num2 && num2>num1) {
+			return num3;
+		}
+	} 
+	//returns smaller of values
+	public static int min(int num1, int num2) {
+		if (num1<num2) {
+			return num1;
+		}else {
+			return num2;
+		}
+	}
+	//rounds a double to 2 decimal places and returns a double
+	public static double round2(double num) {
+		num+= 0.005;
+		num*=100;
+		int num;
+				
+	
+	}
+}	
