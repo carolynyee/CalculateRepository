@@ -116,6 +116,34 @@ public class Calculate {
 		int round= (int)num;
 		return round/100.0;
 	}
-	
-}
+
+	//exponent
+	//raises value to positive integer power
+	public static double exponent(double num1, int num2) {
+		int i=0;
+		double answer=1;
+		while (i<num2) {
+			answer= answer*num1;
+			i = i+1;
+		}
+			return answer;
+	}
+	//factorial
+	//returns factorial of the value passed
+	public static int factorial(int num) {
+		int i=num;
+		int answer=1;
+		while (i>0) {
+			answer=answer*num;
+			num=num-1;
+					i=i-1;
+		}
+		return answer;
+	}
+	//isPrime
+	//determines whether an integer is prime
+	public static boolean isPrime(int num) {
+		isDivisibleBy();
+	}
+	}
 	

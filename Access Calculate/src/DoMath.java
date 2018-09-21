@@ -21,6 +21,8 @@ public class DoMath {
 			System.out.println(Calculate.max(5.0, 6.0, 7.0));
 			System.out.println(Calculate.min(5, 6));
 			System.out.println(Calculate.round2(5.4567));
+			System.out.println(Calculate.exponent(5, 1));
+			System.out.println(Calculate.factorial(5));
 		// TODO Auto-generated method stub
 
 	}
