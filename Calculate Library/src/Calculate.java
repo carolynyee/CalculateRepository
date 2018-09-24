@@ -143,7 +143,8 @@ public class Calculate {
 	//isPrime
 	//determines whether an integer is prime
 public static boolean isPrime(int num) {
-		if isDivisibleBy(num) = 0 {
+		isDivisibleBy(num);
+			
 			return num;
 			else	
 
