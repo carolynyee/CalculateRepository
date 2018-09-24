@@ -142,8 +142,26 @@ public class Calculate {
 	}
 	//isPrime
 	//determines whether an integer is prime
-	public static boolean isPrime(int num) {
-		isDivisibleBy();
+public static boolean isPrime(int num) {
+		if isDivisibleBy(num) = 0 {
+			return num;
+			else	
+
+	}
+	//gcf
+/*	//finds greatest common factor of two integers
+	public static int gcd(int a, int b){
+	    int temp;
+	    if (a == 0) return b;
+	    if (a < 0) a *=-1;
+	    if (b < 0) b *=-1;
+	   
+	    while (b !=0 ) {
+	        temp = a % b;
+	        a = b;
+	        b = temp;
+	    } return a;*/
 	}
 	}
+
 	
