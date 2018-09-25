@@ -46,12 +46,18 @@ public class Calculate {
 	//toImproperFraction
 	//converts mixed number to improper fraction
 	public static String toImproperFrac(int number, int numerator, int denominator) {
+		if (denominator==0) {
+			throw new IllegalArgumentException("denominator cannot be 0");
+		}
 		return (number*denominator+numerator + "/" + denominator);
 	}
 	
 	//toMixedNum
 	//improper fraction to mixed number
 	public static String toMixedNum(int numerator, int denominator) {
+		if(denominator==0) {
+			throw new IllegalArgumentException("denominator cannot be 0");
+		}
 		return (numerator/denominator + " " + numerator%denominator+ "/" +denominator);
 	}
 	//foil
@@ -62,11 +68,15 @@ public class Calculate {
 	//isDivisibleBy
 	//determines if integer is evenly divisible
 	public static boolean isDivisibleBy (int num1, int num2) {
+		if (num2==0) {
+		throw new IllegalArgumentException("0 cannot be a factor");
+		}	
 		if(num1%num2==0) {
-		return true;
-	}else {
-		return false;
+			return true;
+		}else {
+			return false;
 		}
+		
 	}
 	//absValue
 	//absolute value of the number passed
@@ -120,6 +130,9 @@ public class Calculate {
 	//exponent
 	//raises value to positive integer power
 	public static double exponent(double num1, int num2) {
+		if (num2<0) {
+			throw new IllegalArgumentException("2nd number cannot be less than 0");
+		}
 		int i=0;
 		double answer=1;
 		while (i<num2) {
@@ -138,42 +151,39 @@ public class Calculate {
 			num=num-1;
 					i=i-1;
 		}
+		if (num<0) {
+			throw new IllegalArgumentException("please input a positive number");
+		}
 		return answer;
 	}
 	//isPrime
 	//determines whether an integer is prime
 	public static boolean isPrime(int num) {
-		for (int i=2; i<num;) {
-			if (isDivisibleBy(num, i)==true) {
-				return false;
-			} else {
-				i+=1;
-				return true;
-				
+		boolean answer=true;
+		if (num<=0) {
+			throw new IllegalArgumentException("input must be greater than 0");
+		}
+		for (int i=2; i<num; i++) {
+			if (isDivisibleBy(num, i)) {
+				answer= false;	
+		}
 			}
-	}
-	
-		/*if (isDivisibleBy(num, 2)) {
-			return false;
-		}else if (isDivisibleBy(num, 3)) {
-			return false;
-		}else if (isDivisibleBy(num, 5)) {
-			return false;
-		}else if (isDivisibleBy(num, 7)) {
-			return false;
-		}else if (isDivisibleBy(num, 11)) {
-			return false;
-		}else {
-			return true;
-		//}for (int i= 0, i<num, i++) {
-				
-		}*/
-	}
+	return answer;
+
+		}
 	
 	//gcf
 	//finds greatest common factor of two integers
-	public static int gcd(int a, int b){
-	    int temp;
+	public static int gcf(int a, int b){
+	    int answer=1;
+	    for (int i=1; i<a || i<b; i++) {
+	    	if (isDivisibleBy(a, i) && (isDivisibleBy(b, i))){
+	    		return answer;
+	    	}
+	    	
+	    	return answer;
+	    }
+		/*int temp;
 	    if (a == 0) return b;
 	    if (a < 0) a *=-1;
 	    if (b < 0) b *=-1;
@@ -182,25 +192,26 @@ public class Calculate {
 	        temp = a % b;
 	        a = b;
 	        b = temp;
-	    } return a;
+	    } return a;*/
 	}
 	//sqrt
 	//returns approximation of square root of value, rounded to 2 decimal places
-	public static double sqrt(double num) {
+	//need to throw an exception here
+	/*public static double sqrt(double num) {
 		double guess = 10.0;
 		double answer= (1.0/2.0)*(num/guess) + guess;
 		if (answer>= num-0.005 || answer<= num+0.005|| answer == num) {
 			return answer;
 		}else {
-			
-				
-				
-				
+					
 			}
 	}
+	*/
+	//quadform
+	//uses coefficients of a quadratic equation in standard form to approximate real roots
 		
 
 	
+	}
 
-}
 	
