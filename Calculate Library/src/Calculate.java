@@ -142,15 +142,36 @@ public class Calculate {
 	}
 	//isPrime
 	//determines whether an integer is prime
-public static boolean isPrime(int num) {
-		isDivisibleBy(num);
-			
-			return num;
-			else	
-
+	public static boolean isPrime(int num) {
+		for (int i=2; i<num;) {
+			if (isDivisibleBy(num, i)==true) {
+				return false;
+			} else {
+				i+=1;
+				return true;
+				
+			}
 	}
+	
+		/*if (isDivisibleBy(num, 2)) {
+			return false;
+		}else if (isDivisibleBy(num, 3)) {
+			return false;
+		}else if (isDivisibleBy(num, 5)) {
+			return false;
+		}else if (isDivisibleBy(num, 7)) {
+			return false;
+		}else if (isDivisibleBy(num, 11)) {
+			return false;
+		}else {
+			return true;
+		//}for (int i= 0, i<num, i++) {
+				
+		}*/
+	}
+	
 	//gcf
-/*	//finds greatest common factor of two integers
+	//finds greatest common factor of two integers
 	public static int gcd(int a, int b){
 	    int temp;
 	    if (a == 0) return b;
@@ -161,8 +182,25 @@ public static boolean isPrime(int num) {
 	        temp = a % b;
 	        a = b;
 	        b = temp;
-	    } return a;*/
+	    } return a;
 	}
+	//sqrt
+	//returns approximation of square root of value, rounded to 2 decimal places
+	public static double sqrt(double num) {
+		double guess = 10.0;
+		double answer= (1.0/2.0)*(num/guess) + guess;
+		if (answer>= num-0.005 || answer<= num+0.005|| answer == num) {
+			return answer;
+		}else {
+			
+				
+				
+				
+			}
 	}
+		
 
+	
+
+}
 	

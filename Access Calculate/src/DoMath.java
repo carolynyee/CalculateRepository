@@ -23,6 +23,7 @@ public class DoMath {
 			System.out.println(Calculate.round2(5.4567));
 			System.out.println(Calculate.exponent(5, 1));
 			System.out.println(Calculate.factorial(5));
+			System.out.println(Calculate.isPrime(121));
 		// TODO Auto-generated method stub
 
 	}
