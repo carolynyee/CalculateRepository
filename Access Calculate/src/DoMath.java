@@ -24,7 +24,8 @@ public class DoMath {
 			System.out.println(Calculate.exponent(5, 2));
 			System.out.println(Calculate.factorial(5));
 			System.out.println(Calculate.isPrime(2));
-			System.out.println(Calculate.gcf(5, 10));
+			System.out.println(Calculate.gcf(72, 81));
+			System.out.println(Calculate.sqrt(25));
 		// TODO Auto-generated method stub
 
 	}
