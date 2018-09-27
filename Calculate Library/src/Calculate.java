@@ -200,6 +200,22 @@ public class Calculate {
 	}
 	//quadform
 	//uses coefficients of a quadratic equation in standard form to approximate real roots
+	public static String quadform(int a, int b,  int c) {
+		//ax ^ 2 + bx + c
+		int two_a= 2 * a; 
+		int discriminant_two_a= (int) discriminant(a, b, c) / two_a;
+		int x_positive = (int) (- b + sqrt(discriminant_two_a));
+		int x_negative = (int) (- b - sqrt(discriminant_two_a));
+		if (discriminant(a, b, c) < 0) {
+			System.out.println("no real roots");
+		}else if (x_positive == x_negative) {
+				double answer = (double) round2(x_positive);
+				return (String) answer;
+		}else (x_positive >= 0 && x_negative >= 0 ); {
+			
+			
+		}
+	}
 }		
 
 
