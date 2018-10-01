@@ -118,14 +118,28 @@ public class Calculate {
 			return num2;
 		}
 	}
+	//min 
+	//overloaded, for use with doubles
+	public static double min(double num1, double num2) {
+		if (num1 < num2) {
+			return num1;
+		}else {
+			return num2;
+		}
+	}
 	//round2
 	//rounds a double to 2 decimal places and returns a double
 	public static double round2(double num) {
-		num += 0.005;
+		if (num >= 0) {
+			num += 0.005;
+		} else {
+			num -= 0.005;
+		}
 		num *= 100;
 		int round = (int)num;
 		return round / 100.0;
 	}
+	
 
 	//exponent
 	//raises value to positive integer power
@@ -202,21 +216,36 @@ public class Calculate {
 	//uses coefficients of a quadratic equation in standard form to approximate real roots
 	public static String quadform(int a, int b,  int c) {
 		//ax ^ 2 + bx + c
-		int two_a= 2 * a; 
-		int discriminant_two_a= (int) discriminant(a, b, c) / two_a;
-		int x_positive = (int) (- b + sqrt(discriminant_two_a));
-		int x_negative = (int) (- b - sqrt(discriminant_two_a));
-		if (discriminant(a, b, c) < 0) {
-			System.out.println("no real roots");
-		}else if (x_positive == x_negative) {
-				double answer = (double) round2(x_positive);
-				return (String) answer;
-		}else (x_positive >= 0 && x_negative >= 0 ); {
-			
-			
-		}
+		// -b +- (sqrt (b ^ 2 - 4 * a * c) / (2 * a))
+		
+		double discriminant = discriminant(a, b, c);
+			if (discriminant(a, b, c) < 0) {
+				System.out.println("no real roots");
+			}
+		double sqrt_discriminant = sqrt(discriminant);
+		
+		double two_a = 2 * a; 
+		double x_positive = (-b + sqrt_discriminant) / two_a;
+		double x_negative = (-b - sqrt_discriminant) / two_a;
+
+			if (discriminant == 0) {
+				x_positive = -b / two_a;
+				x_positive = round2(x_positive);
+				String answer = x_positive + ""; 
+				return answer;
+			}
+			if (x_positive >= 0 && x_negative >= 0); {
+				double min =  min(x_positive, x_negative);
+				double max = max(x_positive, x_negative);
+				min = round2(min-= 0.005);
+				max = round2(max);
+				return "" + min + " and " + max + "";
+			}
+	
+	
 	}
-}		
+	
+}	
 
 
 	
