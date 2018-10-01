@@ -209,7 +209,7 @@ public class Calculate {
 		if (discriminant(a, b, c) < 0) {
 			System.out.println("no real roots");
 		}else if (x_positive == x_negative) {
-				double answer = (double) round2(x_positive);
+				double answer = round2(x_positive);
 				return (String) answer;
 		}else (x_positive >= 0 && x_negative >= 0 ); {
 			
