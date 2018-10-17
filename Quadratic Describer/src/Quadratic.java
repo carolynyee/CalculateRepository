@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 //Carolyn Yee
 //Quadratic class of project QuadraticDescriber
@@ -120,13 +121,36 @@ public class Quadratic {
 				}
 			}
 		
-	//	public static String quadrDescriber (double a, double b, double c) {
-			
-			
-
-		//	}
-			
-
+	public static String quadrDescriber (double a, double b, double c) {
+		Scanner userinput = new Scanner(System.in);
+		System.out.print("a: ");
+		a = userinput.nextDouble();
+		System.out.println(a);
+		
+		System.out.print("b: ");
+		b = userinput.nextDouble();
+		System.out.println(b);
+		
+		System.out.print("c: ");
+		c = userinput.nextDouble();
+		System.out.println(c);
+		
+		double axis = (-b)/(2*a); 
+				
+		double yvertex = (a*(axis)*(axis) + b*(axis) + c); 
+		
+		String xintercept = Quadratic.quadform(a, b, c);
+		System.out.println("x-intercept(s): " + xintercept);
+		
+		System.out.println("y-intercept: " + c);
+		
+		System.out.println("Do you want to keep going? (Type \"quit\" to end)");
+		// y or n 
+		String response = userinput.next();
+		if (response.equals("quit")) {
+			userinput.close();
+			}
+		
+	}
 }
-
 

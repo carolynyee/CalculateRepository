@@ -40,9 +40,9 @@ public class QuadraticClient {
 		System.out.println();
 		
 		if (a>0) {
-			System.out.println("Opens: up");
+			System.out.println("Opens: Up");
 		} else {
-			System.out.println("Opens: down");
+			System.out.println("Opens: Down");
 		}
 		double axis = (-b)/(2*a); 
 		System.out.println("Axis of Symmetry: " + axis);
@@ -58,14 +58,8 @@ public class QuadraticClient {
 		System.out.println("Do you want to keep going? (Type \"quit\" to end)");
 		// y or n 
 		String response = userinput.next();
-		if (response )
-		
-		
-	
-	
-	
-	
-	
-	userinput.close();
+		if (response.equals("quit")) {
+			userinput.close();
+		} 
 	}
 }
