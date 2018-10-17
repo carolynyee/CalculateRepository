@@ -3,9 +3,13 @@
 //Quadratic class of project QuadraticDescriber
 //10/09/2018
 
-import java.util.*;
 public class Quadratic {
 	
+	//foil
+		//converts a binomial into quadratic
+		public static String foil(int ax, int b, int cx, int d, String n) {
+			return (ax * cx + n + "^2" + " + " + ((ax * d) + (b * cx))+ "n " + " + " + b * d);
+		}
 	//discriminant
 		//provides coefficient of quadratic equation and returns discriminant
 		public static double discriminant(double a, double b, double c) {
@@ -87,7 +91,7 @@ public class Quadratic {
 			}
 		//quadform
 		//uses coefficients of a quadratic equation in standard form to approximate real roots
-		public static String quadform(int a, int b,  int c) {
+		public static String quadform(double a, double b,  double c) {
 			//ax ^ 2 + bx + c	
 			// -b +- (sqrt (b ^ 2 - 4 * a * c) / (2 * a))
 				
@@ -116,12 +120,11 @@ public class Quadratic {
 				}
 			}
 		
-		public static String quadrDescriber (double a, double b, double c) {
-			//scanner object?????
-			Scanner scan = new Scanner(System.in);
+	//	public static String quadrDescriber (double a, double b, double c) {
+			
 			
 
-			}
+		//	}
 			
 
 }

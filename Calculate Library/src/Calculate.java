@@ -181,10 +181,9 @@ public class Calculate {
 			if (isDivisibleBy(num, i)) {
 				answer = false;	
 		}
-		}
+	}
 	return answer;
-
-		}
+	}
 	
 	//gcf
 	//finds greatest common factor of two integers
