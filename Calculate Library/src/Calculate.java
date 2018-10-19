@@ -19,24 +19,24 @@ public class Calculate {
 	//average
 	//returns the average of two numbers
 	public static double average(double num1, double num2) {
-		return (num1 + num2) / 2;
+		return (num1 + num2) / 2.0;
 	}
 	//average
 	//returns the average of three numbers
 	public static double average(double num1, double num2, double num3) {
-		return (num1 + num2 + num3) / 2;
+		return (num1 + num2 + num3) / 3.0;
 	}
 	//toDegrees
 	//converts angle measure in radians to degrees
 	public static double toDegrees(double number) {
 		double pi = 3.14159;
-		return (number * (180 / pi));
+		return (number * (180.0 / pi));
 	}
 	//toRadians
-	//converts degress to radians
+	//converts degrees to radians
 	public static double toRadians(double number) {
 		double pi = 3.14159;
-		return (number * (pi / 180));
+		return (number * (pi / 180.0));
 	}
 	//discriminant
 	//provides coefficient of quadratic equation and returns discriminant
@@ -49,7 +49,7 @@ public class Calculate {
 		if (denominator == 0) {
 			throw new IllegalArgumentException("denominator cannot be 0");
 		}
-		return (number * denominator + numerator + "/" + denominator);
+		return ((number * denominator + numerator) + "/" + denominator);
 	}
 	
 	//toMixedNum
@@ -69,11 +69,11 @@ public class Calculate {
 	//determines if integer is evenly divisible
 	public static boolean isDivisibleBy(int num1, int num2) {
 		if (num2 == 0) {
-			throw new IllegalArgumentException("0 cannot be a factor");
+			throw new IllegalArgumentException("Second number cannot be 0");
 		}	
 		if (num1 % num2 == 0) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 		
