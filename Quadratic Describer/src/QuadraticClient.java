@@ -19,23 +19,58 @@ import java.util.*;
 
 public class QuadraticClient {
 	public static void main(String[] args) {
+		
 		Scanner userinput = new Scanner(System.in);
+		
 		System.out.println("Welcome to the Quadratic Describer");
 		System.out.println("Provide values for the coefficients a, b, and c");
 		
 		System.out.print("a: ");
 		double a = userinput.nextDouble();
-		System.out.println(a);
 		
 		System.out.print("b: ");
 		double b = userinput.nextDouble();
-		System.out.println(b);
 		
 		System.out.print("c: ");
 		double c = userinput.nextDouble();
-		System.out.println(c);
 		
-		System.out.println("Description of the graph of:");
+		Quadratic.quadrDescriber(a, b, c);
+		
+		System.out.println("Do you want to keep going? (Type \"quit\" to end)");
+		// y or n 
+		//String response = userinput.next();
+		
+		String response = userinput.next();
+		while(!response.equals("quit")) {
+			
+			System.out.println("Welcome to the Quadratic Describer");
+			System.out.println("Provide values for the coefficients a, b, and c");
+			
+			System.out.print("a: ");
+			a = userinput.nextDouble();
+			
+			System.out.print("b: ");
+			b = userinput.nextDouble();
+			
+			System.out.print("c: ");
+			c = userinput.nextDouble();
+			
+			Quadratic.quadrDescriber(a, b, c);
+			
+			System.out.println("Do you want to keep going? (Type \"quit\" to end)");
+			// y or n 
+			//String response = userinput.next();
+			
+			response = userinput.next();
+		}
+		userinput.close();
+
+	}
+		
+		
+		
+		
+		/*System.out.println("Description of the graph of:");
 		System.out.println(a + "x^2" + " + " + b + "x" + " + " + c);
 		System.out.println();
 		
@@ -50,7 +85,7 @@ public class QuadraticClient {
 		double yvertex = (a*(axis)*(axis) + b*(axis) + c); 
 		System.out.println("Vertex: (" + axis + " , " + yvertex + ")");
 		
-		String xintercept = Quadratic.quadform(a, b, c);
+		String xintercept = Quadratic.quadForm(a, b, c);
 		System.out.println("x-intercept(s): " + xintercept);
 		
 		System.out.println("y-intercept: " + c);
@@ -60,6 +95,8 @@ public class QuadraticClient {
 		String response = userinput.next();
 		if (response.equals("quit")) {
 			userinput.close();
-		} 
-	}
-}
+		}
+		*/
+		}
+	
+

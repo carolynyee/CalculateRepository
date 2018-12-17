@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 //Carolyn Yee
 //Quadratic class of project QuadraticDescriber
@@ -81,25 +80,27 @@ public class Quadratic {
 		//returns approximation of square root of value, rounded to 2 decimal places
 		//need to throw an exception here
 		public static double sqrt(double num) {
-			if (num < 0) {
-				throw new IllegalArgumentException("cannot be negative");
-			}
+			//if (num < 0) {
+				//throw new IllegalArgumentException("cannot be negative");
+			//}
 			double guess = 10.0;
 				while (absValue(num - (guess * guess)) > 0.005){
 					guess = 0.5 * (num / guess + guess);
 				}	
 				return round2(guess);
 			}
-		//quadform
+		//quadForm
 		//uses coefficients of a quadratic equation in standard form to approximate real roots
-		public static String quadform(double a, double b,  double c) {
+		public static String quadForm(double a, double b,  double c) {
 			//ax ^ 2 + bx + c	
 			// -b +- (sqrt (b ^ 2 - 4 * a * c) / (2 * a))
 				
 			double discriminant = discriminant(a, b, c);
 				if (discriminant(a, b, c) < 0) {
-					System.out.println("no real roots");
+					String answer = "no real roots";
+					return answer;
 				}
+			
 			double sqrt_discriminant = sqrt(discriminant);
 			double two_a = 2 * a; 
 				
@@ -121,36 +122,37 @@ public class Quadratic {
 				}
 			}
 		
+
+		
 	public static String quadrDescriber (double a, double b, double c) {
-		Scanner userinput = new Scanner(System.in);
-		System.out.print("a: ");
-		a = userinput.nextDouble();
-		System.out.println(a);
 		
-		System.out.print("b: ");
-		b = userinput.nextDouble();
-		System.out.println(b);
+		System.out.println("Description of the graph of: ");
+		String equation = (a + " x^2" + " + " + b + " x" + " + " + c);
+		System.out.println("y = " + equation);
+		if (a > 0) {
+			System.out.println("Opens: Up");
+		} else {
+			System.out.println("Opens: Down");
+		}
+		double axis = (-b) / (2 * a); 
+			if (axis == 0) {
+				axis = 0.0;
+			}
+		System.out.println("Axis of Symmetry: " + axis);
 		
-		System.out.print("c: ");
-		c = userinput.nextDouble();
-		System.out.println(c);
+		double yvertex = (a * (axis) * (axis) + b * (axis) + c); 
+		System.out.println("Vertex: (" + axis + ", " + yvertex + ")");
 		
-		double axis = (-b)/(2*a); 
-				
-		double yvertex = (a*(axis)*(axis) + b*(axis) + c); 
+		String xintercept = Quadratic.quadForm(a, b, c);
 		
-		String xintercept = Quadratic.quadform(a, b, c);
 		System.out.println("x-intercept(s): " + xintercept);
+			
 		
 		System.out.println("y-intercept: " + c);
-		
-		System.out.println("Do you want to keep going? (Type \"quit\" to end)");
-		// y or n 
-		String response = userinput.next();
-		if (response.equals("quit")) {
-			userinput.close();
-			}
-		
+		return equation;
 	}
+
+
+
 }
 

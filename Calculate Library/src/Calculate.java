@@ -83,9 +83,7 @@ public class Calculate {
 	public static double absValue(double num){
 		if (num < 0) {
 			num *= -1;
-		} else if (num >= 0){
-			num =+ num;
-		}
+		} 
 		return num;
 	}
 	//max
